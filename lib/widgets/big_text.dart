@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:web3solution/utils/dimensions.dart';
 
 class BigText extends StatelessWidget {
-  final Color? color;
+  final Color color;
   final String text;
   final double size;
   final TextOverflow overflow;

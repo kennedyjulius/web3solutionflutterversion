@@ -1,29 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:web3solution/utils/dimensions.dart';
-import 'package:web3solution/widgets/app_icon.dart';
 import 'package:web3solution/widgets/big_text.dart';
 import 'package:web3solution/widgets/iconTextWidget.dart';
 
-class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
             automaticallyImplyLeading: true,
-            toolbarHeight: 100,
+            toolbarHeight: 80,
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GestureDetector(
                   onTap: () {},
-                  child: AppIcon(
-                    icon: Icons.menu,
-                    iconsize: Dimensions.iconSize24,
-                  ),
+                  child: Icon(Icons.menu)
                 ),
                 BigText(
                   text: 'Stylish Dashboard',
@@ -31,23 +27,14 @@ class DashboardScreen extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {},
-                  child: AppIcon(
-                    icon: Icons.notifications,
-                    iconsize: Dimensions.iconSize24,
-                  ),
+                  child: Icon(Icons.notification_add)
                 ),
               ],
             ),
             pinned: true,
             backgroundColor: Colors.amber,
           ),
-          SliverToBoxAdapter(
-            child: Column(
-              children: [
-                IconTextWidget(icon: Icons.send, text: "Send")
-              ],
-            ),
-          )
+          
         ],
       ),
     );

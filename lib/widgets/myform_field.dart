@@ -7,7 +7,7 @@ class MyformField extends StatelessWidget {
   final bool obscureText;
   final Widget suffixIcon;
   final Widget prefixIcon;
-  final String? Function(String?)? validator;
+  final String Function(String?)? validator;
 
   const MyformField({
     Key? key,
