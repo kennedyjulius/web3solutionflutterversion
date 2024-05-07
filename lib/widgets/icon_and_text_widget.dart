@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_app_part1/Widgets/small_text.dart';
+import 'package:web3solution/widgets/small_text.dart';
 
 class IconAndTextWidget extends StatelessWidget {
   final IconData icon;

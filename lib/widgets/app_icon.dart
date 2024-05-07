@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_app_part1/Utils/dimensions.dart';
 
 class AppIcon extends StatelessWidget {
   // Properties of the AppIcon widget
