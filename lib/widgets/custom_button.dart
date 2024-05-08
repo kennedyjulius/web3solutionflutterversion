@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web3solution/utils/Colors.dart';
+import 'package:web3solution/utils/dimensions.dart';
 
 
 
@@ -15,8 +16,8 @@ class CustomButton extends StatelessWidget {
       child: GestureDetector(
         onTap: ontap,
         child: Container(
-          height: 50,
-          width: 250,
+          height: Dimensions.height45,
+          width: MediaQuery.of(context).size.width -20,
           decoration: BoxDecoration(
               color: Colors.pink.shade200,
               borderRadius: BorderRadius.circular(20),

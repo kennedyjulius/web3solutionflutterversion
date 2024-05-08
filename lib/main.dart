@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:web3solution/screens/home_screen.dart';
+import 'package:web3solution/screens/send_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home:SendScreen(),
     );
   }
 }

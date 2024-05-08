@@ -1,38 +1,43 @@
 import 'package:flutter/material.dart';
 
-class AppIcon extends StatelessWidget {
-  // Properties of the AppIcon widget
+class CircularIconButton extends StatelessWidget {
   final IconData icon;
-  final Color? backgroundColor; // Make Color nullable
-  final Color? iconColor; // Make Color nullable
-  final double size;
-  final double iconSize;
+  final String text;
+  final VoidCallback onTap;
 
-  // Constructor to initialize the properties
-  const AppIcon({
-    Key? key,
-    required this.icon,
-    this.backgroundColor, // Remove default value
-    this.iconColor, // Remove default value
-    this.size = 40, 
-    this.iconSize= 16, required double iconsize,
-  }) : super(key: key);
+  CircularIconButton({required this.icon, required this.text, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    
-    return Container(
-      width: size,
-      height: size,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(size / 2),
-        color: backgroundColor ?? Color(0xFFfcf4e4), // Use null-aware operator
-      ),
-      
-      child: Icon(
-        icon,
-        color: iconColor ?? Color(0xFF756d54),
-        size: iconSize, // Use null-aware operator
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 60,
+        height: 80,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 60,
+              height: 60,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.blue,
+              ),
+              child: Icon(
+                icon,
+                size: 30,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 5),
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 14),
+            ),
+          ],
+        ),
       ),
     );
   }
